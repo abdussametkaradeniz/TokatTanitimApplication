@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:text="Tokat tanıtım uygulaması"
+        app:layout_constraintStart_toStartOf="@+id/si_txturun_isim"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/si_txturun_isim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="ürün ismini giriniz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/si_etxt_urun_aciklama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="açıklama giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/si_etxt_urun_fiyat"
+        app:layout_constraintTop_toBottomOf="@+id/si_etxt_urun_fiyat" />
+
+    <EditText
+        android:id="@+id/si_etxt_urun_fiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Ürün fiyatı giriniz"
+        app:layout_constraintStart_toStartOf="@+id/si_txturun_isim"
+        app:layout_constraintTop_toBottomOf="@+id/si_txturun_isim" />
+
+    <Spinner
+        android:id="@+id/si_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:entries="@array/urun_tip"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/si_etxt_urun_aciklama" />
+
+    <Button
+        android:id="@+id/si_btn_urun_olustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:onClick="si_urunOlustur"
+        android:text="urun olustur"
+        app:layout_constraintBottom_toTopOf="@+id/btnUrunListele"
+        app:layout_constraintStart_toStartOf="@+id/btnUrunListele" />
+
+    <Button
+        android:id="@+id/btnkamerayibaslat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="11dp"
+        android:onClick="si_urunOlustur"
+        android:text="kamerayı başlat"
+        app:layout_constraintStart_toStartOf="@+id/si_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/si_spinner" />
+
+    <Button
+        android:id="@+id/btnUrunListele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="si_urunOlustur"
+        android:text="Urunleri listele"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/fotoyeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toTopOf="@+id/si_btn_urun_olustur"
+        app:layout_constraintEnd_toEndOf="@+id/si_btn_urun_olustur"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

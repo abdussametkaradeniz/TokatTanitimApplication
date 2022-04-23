@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TokatTanitimApplication</string>
+    <string-array name="urun_tip">
+        <item>paket</item>
+        <item>kilo</item>
+        <item>adet</item>
+    </string-array>
+</resources>
